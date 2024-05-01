@@ -22,3 +22,7 @@
 <h1>api add-request-get</h1>
 <img src ='https://i.imgur.com/yp5Z2RU.png' />
 <img src ='https://i.imgur.com/WQtpGrT.png'/>
+<h1>api accept-friend</h1>
+<img src ='https://i.imgur.com/n9ceUQJ.png' />
+<img src ='https://i.imgur.com/NBLxwaC.png'/>
+<img src ='https://i.imgur.com/nmbrC8l.png'/>
