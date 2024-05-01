@@ -7,3 +7,5 @@
 <img src ='https://i.imgur.com/dp8njuM.png' />
 <h1>api find-user-by-phoneNumber</h1>
 <img src ='https://i.imgur.com/UdrMvmY.png' />
+<h1>api update</h1>
+<img src ='https://i.imgur.com/pWFZEHM.png' />
