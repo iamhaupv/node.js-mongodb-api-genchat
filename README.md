@@ -54,3 +54,5 @@
 <img src ='https://i.imgur.com/ys5CHv7.png'/>
 <h1>api delete-message-by-id</h1>
 <img src = 'https://i.imgur.com/sOcF2DN.png'/>
+<h1>api send-file</h1>
+<img src = 'https://i.imgur.com/2ZZdhUE.png'/>
