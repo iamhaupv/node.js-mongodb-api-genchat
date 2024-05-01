@@ -12,3 +12,5 @@
 <h1>api upload-avatar</h1>
 <img src ='https://i.imgur.com/hN50oCF.png' />
 <img src ='https://i.imgur.com/73NzdpK.png'/>
+<h1>api delete-user</h1>
+<img src ='https://i.imgur.com/J3HtdUL.png' />
