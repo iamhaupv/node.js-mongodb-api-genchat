@@ -19,3 +19,6 @@
 <h1>api add-request-send</h1>
 <img src ='https://i.imgur.com/Vz8R0Yz.png' />
 <img src ='https://i.imgur.com/RUJ3AKh.png' />
+<h1>api add-request-get</h1>
+<img src ='https://i.imgur.com/yp5Z2RU.png' />
+<img src ='https://i.imgur.com/WQtpGrT.png'/>
