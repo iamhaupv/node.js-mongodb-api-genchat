@@ -33,3 +33,5 @@
 <img src ='https://i.imgur.com/12zOrYe.png'/>
 <h1>api get-request-send</h1>
 <img src = 'https://i.imgur.com/P9E4he1.png'/>
+<h1>api get-request-get</h1>
+<img src = 'https://i.imgur.com/TjTqdeP.png'/>
