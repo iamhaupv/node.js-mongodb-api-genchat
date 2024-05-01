@@ -44,3 +44,7 @@
 <h1>api remove-request-send</h1>
 <img src = 'https://i.imgur.com/o0qyNB6.png'/>
 <img src = 'https://i.imgur.com/NlbGijk.png'/>
+<h1>api remove-request-get</h1>
+<img src = 'https://i.imgur.com/ehshSkE.png'/>
+<img src = 'https://i.imgur.com/u1TWNwE.png'/>
+
