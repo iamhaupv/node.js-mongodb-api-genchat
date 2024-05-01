@@ -9,3 +9,6 @@
 <img src ='https://i.imgur.com/UdrMvmY.png' />
 <h1>api update</h1>
 <img src ='https://i.imgur.com/pWFZEHM.png' />
+<h1>api upload-avatar</h1>
+<img src ='https://i.imgur.com/hN50oCF.png' />
+<img src ='https://i.imgur.com/73NzdpK.png'/>
