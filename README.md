@@ -38,3 +38,6 @@
 <h1>api accept-request-send</h1>
 <img src = 'https://i.imgur.com/kYLb2p1.png'/>
 <img src = 'https://i.imgur.com/3VaRVAp.png'/>
+<h1>api accept-request-get</h1>
+<img src = 'https://i.imgur.com/Tm1ftCr.png'/>
+<img src = 'https://i.imgur.com/zdxrjg1.png'/>
