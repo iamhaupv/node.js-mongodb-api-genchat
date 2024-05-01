@@ -14,3 +14,5 @@
 <img src ='https://i.imgur.com/73NzdpK.png'/>
 <h1>api delete-user</h1>
 <img src ='https://i.imgur.com/J3HtdUL.png' />
+<h1>api change-password</h1>
+<img src ='https://i.imgur.com/488odbd.png' />
