@@ -39,7 +39,7 @@
 <img src = 'https://i.imgur.com/LsQuZs5.png'/>
 <img src = 'https://i.imgur.com/3VaRVAp.png'/>
 <h1>api accept-request-get</h1>
-<img src = 'https://i.imgur.com/Tm1ftCr.png'/>
+<img src = 'https://i.imgur.com/9Uk0QIu.png'/>
 <img src = 'https://i.imgur.com/zdxrjg1.png'/>
 <h1>api remove-request-send</h1>
 <img src = 'https://i.imgur.com/o0qyNB6.png'/>
