@@ -29,7 +29,7 @@
 <h1>api get-list-friend</h1>
 <img src = 'https://i.imgur.com/HzQl6P0.png'/>
 <h1>api remove-friend</h1>
-<img src ='https://i.imgur.com/4BeX6Pj.png' />
+<img src ='https://i.imgur.com/Ux5mZxH.png' />
 <img src ='https://i.imgur.com/12zOrYe.png'/>
 <h1>api get-request-send</h1>
 <img src = 'https://i.imgur.com/P9E4he1.png'/>
