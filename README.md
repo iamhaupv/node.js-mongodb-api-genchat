@@ -17,7 +17,7 @@
 <h1>api change-password</h1>
 <img src ='https://i.imgur.com/fgXgQXV.png' />
 <h1>api add-request-send</h1>
-<img src ='https://i.imgur.com/Vz8R0Yz.png' />
+<img src ='https://i.imgur.com/uCI2xmg.png' />
 <img src ='https://i.imgur.com/RUJ3AKh.png' />
 <h1>api add-request-get</h1>
 <img src ='https://i.imgur.com/yp5Z2RU.png' />
