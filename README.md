@@ -70,4 +70,5 @@
 <img src = 'https://i.imgur.com/9TOpm26.png'/>
 <h1>api authorization-room-owner</h1>
 <img src = 'https://i.imgur.com/LxUf28X.png'/>
-
+<h1>api authorization-room-leader</h1>
+<img src = 'https://i.imgur.com/LZo7xgK.png'/>
