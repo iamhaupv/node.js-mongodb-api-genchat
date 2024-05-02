@@ -56,3 +56,7 @@
 <img src = 'https://i.imgur.com/sOcF2DN.png'/>
 <h1>api send-file</h1>
 <img src = 'https://i.imgur.com/2ZZdhUE.png'/>
+
+<h1>Rooms</h1>
+<h1>api create-room</h1>
+<img src = 'https://i.imgur.com/HrpoVdS.png'/>
