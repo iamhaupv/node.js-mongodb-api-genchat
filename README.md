@@ -15,7 +15,7 @@
 <h1>api delete-user</h1>
 <img src ='https://i.imgur.com/J3HtdUL.png' />
 <h1>api change-password</h1>
-<img src ='https://i.imgur.com/488odbd.png' />
+<img src ='https://i.imgur.com/fgXgQXV.png' />
 <h1>api add-request-send</h1>
 <img src ='https://i.imgur.com/Vz8R0Yz.png' />
 <img src ='https://i.imgur.com/RUJ3AKh.png' />
