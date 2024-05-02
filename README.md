@@ -68,3 +68,5 @@
 <img src = 'https://i.imgur.com/DIclsVA.png'/>
 <img src = 'https://i.imgur.com/UTImytl.png'/>
 <img src = 'https://i.imgur.com/TjfCYI5.png'/>
+<h1>api update-room-infor</h1>
+<img src = 'https://i.imgur.com/9TOpm26.png'/>
