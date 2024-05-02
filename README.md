@@ -45,7 +45,7 @@
 <img src = 'https://i.imgur.com/vb0gED2.png'/>
 <img src = 'https://i.imgur.com/NlbGijk.png'/>
 <h1>api remove-request-get</h1>
-<img src = 'https://i.imgur.com/ehshSkE.png'/>
+<img src = 'https://i.imgur.com/otSqVpv.png'/>
 <img src = 'https://i.imgur.com/u1TWNwE.png'/>
 
 <h1>Messengers</h1>
