@@ -87,3 +87,10 @@ TH2: phoneAuth là leader muốn xóa member ra khỏi group
 <img src = 'https://i.imgur.com/1tLRpRH.png'/>
 TH3: phoneAuth không là owner hoặc leader muốn xóa members ra khỏi group
 <img src = 'https://i.imgur.com/49dFtHJ.png'/>
+<h1>api remove-leader-out-group</h1>
+TH1: phoneAuth là owner muốn xóa member ra khỏi group
+<img src = 'https://i.imgur.com/bxG0GPF.png'/>
+TH2: phoneAuth là leader muốn xóa member ra khỏi group
+<img src = 'https://i.imgur.com/1tLRpRH.png'/>
+TH3: phoneAuth không là owner hoặc leader muốn xóa members ra khỏi group
+<img src = 'https://i.imgur.com/FZRz0Vf.png'/>
