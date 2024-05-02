@@ -64,3 +64,7 @@
 <img src = 'https://i.imgur.com/vrEYbg4.png'/>
 <h1>api delete-room-by-roomId</h1>
 <img src = 'https://i.imgur.com/srCaXhf.png'/>
+<h1>api join-room-by-roomId</h1>
+<img src = 'https://i.imgur.com/DIclsVA.png'/>
+<img src = 'https://i.imgur.com/UTImytl.png'/>
+<img src = 'https://i.imgur.com/TjfCYI5.png'/>
