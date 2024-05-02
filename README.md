@@ -36,7 +36,7 @@
 <h1>api get-request-get</h1>
 <img src = 'https://i.imgur.com/TjTqdeP.png'/>
 <h1>api accept-request-send</h1>
-<img src = 'https://i.imgur.com/kYLb2p1.png'/>
+<img src = 'https://i.imgur.com/LsQuZs5.png'/>
 <img src = 'https://i.imgur.com/3VaRVAp.png'/>
 <h1>api accept-request-get</h1>
 <img src = 'https://i.imgur.com/Tm1ftCr.png'/>
