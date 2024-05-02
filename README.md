@@ -77,6 +77,6 @@ TH2: phoneAuth không là owner muốn cấp quyền leader
 <img src = 'https://i.imgur.com/ZT3D5Xw.png'/>
 <h1>api authorization-room-members</h1>
 TH1: phoneAuth là owner muốn cấp quyền từ leader xuống member
-<img src = 'https://i.imgur.com/igVtdij.png'/>
+<img src = 'https://i.imgur.com/2lBlMIo.png'/>
 TH2: phoneAuth không là owner muốn cấp quyền leader xuống member
 <img src = 'https://i.imgur.com/5tZb1i9.png'/>
