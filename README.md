@@ -73,3 +73,5 @@ Khi tạo ra room thì người tạo là owner được cấp full roles
 <h1>api authorization-room-leader</h1>
 TH1: phoneAuth là owner muốn cấp quyền leader
 <img src = 'https://i.imgur.com/igVtdij.png'/>
+TH2: phoneAuth không là owner muốn cấp quyền leader
+<img src = 'https://i.imgur.com/ZT3D5Xw.png'/>
