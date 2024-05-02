@@ -58,6 +58,7 @@
 
 <h1>Rooms</h1>
 <h1>api create-room</h1>
+Khi tạo ra room thì người tạo là owner được cấp full roles
 <img src = 'https://i.imgur.com/wW7zrSf.png'/>
 <h1>api find-room-by-roomId</h1>
 <img src = 'https://i.imgur.com/vrEYbg4.png'/>
@@ -65,10 +66,17 @@
 <img src = 'https://i.imgur.com/srCaXhf.png'/>
 <h1>api join-room-by-roomId</h1>
 <img src = 'https://i.imgur.com/iGu9HA2.png'/>
-
 <h1>api update-room-infor</h1>
 <img src = 'https://i.imgur.com/9TOpm26.png'/>
 <h1>api authorization-room-owner</h1>
 <img src = 'https://i.imgur.com/LxUf28X.png'/>
 <h1>api authorization-room-leader</h1>
-<img src = 'https://i.imgur.com/LZo7xgK.png'/>
+TH1: phoneAuth là owner muốn cấp quyền leader
+<img src = 'https://i.imgur.com/igVtdij.png'/>
+TH2: phoneAuth không là owner muốn cấp quyền leader
+<img src = 'https://i.imgur.com/ZT3D5Xw.png'/>
+<h1>api authorization-room-members</h1>
+TH1: phoneAuth là owner muốn cấp quyền từ leader xuống member
+<img src = 'https://i.imgur.com/2lBlMIo.png'/>
+TH2: phoneAuth không là owner muốn cấp quyền leader xuống member
+<img src = 'https://i.imgur.com/5tZb1i9.png'/>
