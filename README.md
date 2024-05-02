@@ -94,3 +94,6 @@ TH2: phoneAuth là leader muốn xóa leader ra khỏi group
 <img src = 'https://i.imgur.com/7BmDxKw.png'/>
 TH3: phoneAuth không là owner hoặc leader muốn xóa leader ra khỏi group
 <img src = 'https://i.imgur.com/FZRz0Vf.png'/>
+<h1>api remove-owner-out-group</h1>
+Khi owner rời đi thì leader sẽ lên làm owner cho đến hết list leader thì tới list members và khi trong group không còn ai thì room sẽ được xóa
+<img src ='https://i.imgur.com/SeQh6Zv.png'/>
