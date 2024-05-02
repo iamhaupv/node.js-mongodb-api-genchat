@@ -58,6 +58,7 @@
 
 <h1>Rooms</h1>
 <h1>api create-room</h1>
+Khi tạo ra room thì người tạo là owner được cấp full roles
 <img src = 'https://i.imgur.com/wW7zrSf.png'/>
 <h1>api find-room-by-roomId</h1>
 <img src = 'https://i.imgur.com/vrEYbg4.png'/>
