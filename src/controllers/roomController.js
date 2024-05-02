@@ -198,10 +198,11 @@ const removeMemberOutGroup = async (req, res) => {
   }
 };
 // remove elder out group
-const removeElderOutGroup = async (req, res) => {
+const removeLeaderOutGroup = async (req, res) => {
   try {
-    const { roomId, phoneNumber } = req.body;
-    const remove = await roomRepository.removeElderOutGroup(
+    const { phoneAuth, roomId, phoneNumber } = req.body;
+    const remove = await roomRepository.removeLeaderOutGroup(
+      phoneAuth,
       roomId,
       phoneNumber
     );
@@ -216,10 +217,10 @@ const removeElderOutGroup = async (req, res) => {
     });
   }
 };
-const removeLeaderOutGroup = async (req, res) => {
+const removeOwnerOutGroup = async (req, res) => {
   try {
     const { roomId, phoneNumber } = req.body;
-    const remove = await roomRepository.removeLeaderOutGroup(
+    const remove = await roomRepository.removeOwnerOutGroup(
       roomId,
       phoneNumber
     );
@@ -236,7 +237,7 @@ const removeLeaderOutGroup = async (req, res) => {
 };
 module.exports = {
   removeLeaderOutGroup,
-  removeElderOutGroup,
+  removeOwnerOutGroup,
   removeMemberOutGroup,
   authorizationRoomMembers,
   authorizationRoomOwner,
