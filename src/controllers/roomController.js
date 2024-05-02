@@ -180,8 +180,9 @@ const authorizationRoomMembers = async (req, res) => {
 // remove member out group
 const removeMemberOutGroup = async (req, res) => {
   try {
-    const { roomId, phoneNumber } = req.body;
+    const { phoneAuth, roomId, phoneNumber } = req.body;
     const remove = await roomRepository.removeMemberOutGroup(
+      phoneAuth,
       roomId,
       phoneNumber
     );
