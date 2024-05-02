@@ -59,7 +59,7 @@
 
 <h1>Rooms</h1>
 <h1>api create-room</h1>
-<img src = 'https://i.imgur.com/HrpoVdS.png'/>
+<img src = 'https://i.imgur.com/wW7zrSf.png'/>
 <h1>api find-room-by-roomId</h1>
 <img src = 'https://i.imgur.com/vrEYbg4.png'/>
 <h1>api delete-room-by-roomId</h1>
