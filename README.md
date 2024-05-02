@@ -60,3 +60,5 @@
 <h1>Rooms</h1>
 <h1>api create-room</h1>
 <img src = 'https://i.imgur.com/HrpoVdS.png'/>
+<h1>api find-room-by-roomId</h1>
+<img src = 'https://i.imgur.com/vrEYbg4.png'/>
