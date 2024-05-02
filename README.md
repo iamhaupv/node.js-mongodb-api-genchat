@@ -65,8 +65,7 @@
 <h1>api delete-room-by-roomId</h1>
 <img src = 'https://i.imgur.com/srCaXhf.png'/>
 <h1>api join-room-by-roomId</h1>
-<img src = 'https://i.imgur.com/DIclsVA.png'/>
-<img src = 'https://i.imgur.com/UTImytl.png'/>
-<img src = 'https://i.imgur.com/TjfCYI5.png'/>
+<img src = 'https://i.imgur.com/iGu9HA2.png'/>
+
 <h1>api update-room-infor</h1>
 <img src = 'https://i.imgur.com/9TOpm26.png'/>
