@@ -1,4 +1,4 @@
-<h1>User</h1>
+![image](https://github.com/longsoisuaxe1a/Node.js-MongoDB-GenChat/assets/88894662/fead88bf-cb5c-4c44-997f-33bde3b36148)<h1>User</h1>
 <h1>api register</h1>
 <img src ='https://i.imgur.com/RLrQv0C.png' />
 <h1>api login</h1>
@@ -80,3 +80,10 @@ TH1: phoneAuth là owner muốn cấp quyền từ leader xuống member
 <img src = 'https://i.imgur.com/2lBlMIo.png'/>
 TH2: phoneAuth không là owner muốn cấp quyền leader xuống member
 <img src = 'https://i.imgur.com/5tZb1i9.png'/>
+<h1>api remove-member-out-group</h1>
+TH1: phoneAuth là owner muốn xóa member ra khỏi group
+<img src = 'https://i.imgur.com/bxG0GPF.png'/>
+TH2: phoneAuth là leader muốn xóa member ra khỏi group
+<img src = 'https://i.imgur.com/1tLRpRH.png'/>
+TH3: phoneAuth không là owner hoặc leader muốn xóa members ra khỏi group
+<img src = 'https://i.imgur.com/49dFtHJ.png'/>
