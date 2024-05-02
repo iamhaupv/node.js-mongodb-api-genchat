@@ -68,3 +68,6 @@
 
 <h1>api update-room-infor</h1>
 <img src = 'https://i.imgur.com/9TOpm26.png'/>
+<h1>api authorization-room-owner</h1>
+<img src = 'https://i.imgur.com/LxUf28X.png'/>
+
