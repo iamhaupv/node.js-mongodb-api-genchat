@@ -194,7 +194,7 @@ const getInfor = async (req, res) => {
   }
 };
 // update các trường của user
-const updateUserInfo = async (req, res) => {
+const updateUserInfor = async (req, res) => {
   try {
     const {
       phoneNumber,
@@ -331,12 +331,13 @@ const findUserByPhoneNumber = async (req, res) => {
 const acceptRequestGet = async (req, res) => {
   try {
     const { phoneNumberUserSend, phoneNumberUserGet } = req.body;
-    await userRepository.acceptRequestGet(
+    const user = await userRepository.acceptRequestGet(
       phoneNumberUserGet,
       phoneNumberUserSend
     );
     res.status(200).json({
       message: "Add Friend Successfully!",
+      data: user
     });
   } catch (error) {
     console.log(error);
@@ -349,12 +350,13 @@ const acceptRequestGet = async (req, res) => {
 const acceptRequestSend = async (req, res) => {
   try {
     const { phoneNumberUserSend, phoneNumberUserGet } = req.body;
-    await userRepository.acceptRequestSend(
+    const user = await userRepository.acceptRequestSend(
       phoneNumberUserSend,
       phoneNumberUserGet
     );
     res.status(200).json({
       message: "Add Friend Successfully!",
+      data: user
     });
   } catch (error) {
     console.log(error);
@@ -367,16 +369,17 @@ const acceptRequestSend = async (req, res) => {
 const acceptFriend = async (req, res) => {
   try {
     const { phoneNumberUserSend, phoneNumberUserGet } = req.body;
-    await userRepository.acceptRequestSend(
+    const user1 = await userRepository.acceptRequestSend(
       phoneNumberUserSend,
       phoneNumberUserGet
     );
-    await userRepository.acceptRequestGet(
+    const user2 =  await userRepository.acceptRequestGet(
       phoneNumberUserGet,
       phoneNumberUserSend
     );
     res.status(200).json({
       message: "Add friend successfully!",
+      data: user1, user2
     });
   } catch (error) {
     console.log(error);
@@ -389,13 +392,13 @@ const acceptFriend = async (req, res) => {
 const addRequestSend = async (req, res) => {
   try {
     const { phoneNumberUserSend, phoneNumberUserGet } = req.body;
-    console.log("2", phoneNumberUserSend);
-    await userRepository.addRequestSend(
+    const user =  await userRepository.addRequestSend(
       phoneNumberUserSend,
       phoneNumberUserGet
     );
     res.status(200).json({
       message: "Add Friend Successfully!",
+      data: user
     });
   } catch (error) {
     console.log(error);
@@ -408,9 +411,10 @@ const addRequestSend = async (req, res) => {
 const addRequestGet = async (req, res) => {
   try {
     const { phoneNumberUserSend, phoneNumberUserGet } = req.body;
-    await userRepository.addRequestGet(phoneNumberUserGet, phoneNumberUserSend);
+    const user =  await userRepository.addRequestGet(phoneNumberUserGet, phoneNumberUserSend);
     res.status(200).json({
       message: "Add Friend Successfully!",
+      data: user
     });
   } catch (error) {
     console.log(error);
@@ -456,9 +460,10 @@ const getRequestSend = async (req, res) => {
 const removeRequestSend = async (req, res) => {
   try {
     const { phoneNumber, phoneRemove } = req.body;
-    await userRepository.removeRequestSend(phoneNumber, phoneRemove);
+    const user = await userRepository.removeRequestSend(phoneNumber, phoneRemove);
     res.status(200).json({
       message: "Remove Successfully!",
+      data: user
     });
   } catch (error) {
     console.log(error);
@@ -471,9 +476,10 @@ const removeRequestSend = async (req, res) => {
 const removeRequestGet = async (req, res) => {
   try {
     const { phoneNumber, phoneRemove } = req.body;
-    await userRepository.removeRequestGet(phoneNumber, phoneRemove);
+    const user = await userRepository.removeRequestGet(phoneNumber, phoneRemove);
     res.status(200).json({
       message: "Remove Successfully!",
+      data: user
     });
   } catch (error) {
     console.log(error);
@@ -486,9 +492,10 @@ const removeRequestGet = async (req, res) => {
 const removeFriend = async (req, res) => {
   try {
     const { phoneNumber, phoneRemove } = req.body;
-    await userRepository.removeFriend(phoneNumber, phoneRemove);
+    const user = await userRepository.removeFriend(phoneNumber, phoneRemove);
     res.status(200).json({
       message: "Remove Friend Successfully!",
+      data: user
     });
   } catch (error) {
     console.log(error);
@@ -518,9 +525,10 @@ const changePassword = async (req, res) => {
   try {
     const { phoneNumber, newPassword } = req.body;
     console.log(phoneNumber, newPassword)
-    await userRepository.changePassword(phoneNumber, newPassword);
+    const user = await userRepository.changePassword(phoneNumber, newPassword);
     res.status(200).json({
       message: "Change password successfully!",
+      data: user
     });
   } catch (error) {
     console.log(error);
@@ -546,7 +554,7 @@ module.exports = {
   findUserByPhoneNumber,
   deleteUser,
   uploadAvatar,
-  updateUserInfo,
+  updateUserInfor,
   getInfor,
   verify,
   sendResetLinkEmail,

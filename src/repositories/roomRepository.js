@@ -13,14 +13,14 @@ const createRoom = async (name, users, updateAt) => {
         throw new Error(`User with phone number ${user} does not exist.`);
       }
     }
-    const leader = users[0]; // Lãnh đạo là người đầu tiên trong mảng
+    const owner = users[0]; // Lãnh đạo là người đầu tiên trong mảng
     const members = users.slice(1); // Các thành viên là các người còn lại trong mảng
-    await Room.create({
+    return await Room.create({
       users,
       roomId,
       name,
       roles: {
-        leader,
+        owner,
         members,
       },
       createAt: Date.now(),
@@ -105,29 +105,35 @@ const joinRoomByRoomId = async (roomId, phoneNumber) => {
     user.rooms.push(roomId);
     await room.save();
     await user.save();
+    return room
   } catch (error) {
     console.log(error);
     throw new Error(error);
   }
 };
 // authorization room
-const authorizationRoomLeader = async (roomId, phoneNumber) => {
+const authorizationRoomOwner = async (roomId, phoneNumber) => {
   try {
     const room = await Room.findOne({ roomId });
     if (!room) {
-      throw new Error("Room is not exits!");
+      throw new Error("Room is not exists!");
     }
     const user = await User.findOne({ phoneNumber });
     if (!user) {
       throw new Error("User is not exist!");
     }
-    room.roles.leader = user.phoneNumber; // Cập nhật trường leader
-    await room.save();
+    // Xóa người dùng khỏi danh sách leader và member
+    room.roles.leader = room.roles.leader.filter(leader => leader !== user.phoneNumber);
+    room.roles.members = room.roles.members.filter(member => member !== user.phoneNumber);
+    // Cập nhật trường owner
+    room.roles.owner = user.phoneNumber;
+    return await room.save();
   } catch (error) {
     console.log(error);
-    throw new Error(error);
+    throw error; // Throw lỗi ra bên ngoài hàm
   }
 };
+
 // update infor room
 const updateInforRoom = async (roomId, newData) => {
   try {
@@ -139,14 +145,14 @@ const updateInforRoom = async (roomId, newData) => {
     if (!name && !updateAt) {
       throw new Error("Missing room identification information!");
     }
-    await Room.findOneAndUpdate({ roomId }, newData, { new: true });
+    return await Room.findOneAndUpdate({ roomId }, newData, { new: true });
   } catch (error) {
     console.log(error);
     throw new Error(error);
   }
 };
 // authorization room elders
-const authorizationRoomElders = async (roomId, phoneNumber) => {
+const authorizationRoomLeader = async (roomId, phoneNumber) => {
   try {
     const room = await Room.findOne({ roomId });
     if (!room) {
@@ -154,15 +160,23 @@ const authorizationRoomElders = async (roomId, phoneNumber) => {
     }
     const user = await User.findOne({ phoneNumber });
     if (!user) {
-      throw new Error("User is not exist! ");
+      throw new Error("User is not exist!");
     }
-    room.roles.elders.push(user.phoneNumber);
-    await room.save();
+
+    // Loại bỏ người dùng ra khỏi danh sách thành viên
+    room.roles.members = room.roles.members.filter(member => member !== user.phoneNumber);
+
+    // Thêm người dùng vào danh sách leader
+    room.roles.leader.push(user.phoneNumber);
+
+    // Lưu lại thông tin phòng
+    return await room.save();
   } catch (error) {
     console.log(error);
-    throw new Error(error);
+    throw error; // Throw lỗi ra bên ngoài hàm
   }
 };
+
 // authorization room members
 const authorizationRoomMembers = async (roomId, phoneNumber) => {
   try {
@@ -174,13 +188,29 @@ const authorizationRoomMembers = async (roomId, phoneNumber) => {
     if (!user) {
       throw new Error("User is not exist!");
     }
-    room.roles.members.push(user.phoneNumber);
-    room.save();
+
+    // Kiểm tra xem người dùng có trong danh sách leader hay không
+    const isLeader = room.roles.leader.includes(user.phoneNumber);
+    if (isLeader) {
+      // Nếu người dùng là leader, loại bỏ người dùng ra khỏi danh sách leader
+      room.roles.leader = room.roles.leader.filter(leader => leader !== user.phoneNumber);
+      // Thêm người dùng vào danh sách thành viên
+      room.roles.members.push(user.phoneNumber);
+      // Lưu lại thông tin phòng
+      await room.save();
+    } else {
+      throw new Error("User is not a leader!");
+    }
+
+    // Trả về phòng sau khi cập nhật
+    return room;
   } catch (error) {
     console.log(error);
-    throw new Error(error);
+    throw error; // Ném lỗi ra bên ngoài hàm
   }
 };
+
+
 // remove member out group
 const removeMemberOutGroup = async (roomId, phoneNumber) => {
   try {
@@ -339,7 +369,7 @@ module.exports = {
   removeElderOutGroup,
   removeMemberOutGroup,
   authorizationRoomMembers,
-  authorizationRoomElders,
+  authorizationRoomOwner,
   authorizationRoomLeader,
   updateInforRoom,
   joinRoomByRoomId,

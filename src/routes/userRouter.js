@@ -14,7 +14,7 @@ router.post("/reset", userController.reset);
 // getInfor
 router.post("/get-infor", userController.getInfor);
 // update userInfor
-router.patch("/update", userController.updateUserInfo);
+router.patch("/update", userController.updateUserInfor);
 // uploadImage
 router.post("/upload-avatar", upload.single("image"), userController.uploadAvatar);
 // delete

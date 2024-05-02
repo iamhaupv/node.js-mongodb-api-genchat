@@ -339,7 +339,7 @@ const removeRequestSend = async (phoneNumber, phoneNumberRemove) => {
     if (!phoneExist) {
       throw new Error("Phone not exist!");
     }
-    await User.updateOne(
+    return await User.updateOne(
       { phoneNumber },
       { $pull: { listRequestSend: phoneNumberRemove } }
     );
@@ -359,7 +359,7 @@ const removeRequestGet = async (phoneNumber, phoneNumberRemove) => {
     if (!phoneExist) {
       throw new Error("Phone not exist!");
     }
-    await User.updateOne(
+    return await User.updateOne(
       { phoneNumber },
       { $pull: { listRequestGet: phoneNumberRemove } }
     );
@@ -379,7 +379,7 @@ const removeFriend = async (phoneNumber, phoneRemove) => {
     if (!phone) {
       throw new Error("Phone is not exist!");
     }
-    await User.findOneAndUpdate(
+    return await User.findOneAndUpdate(
       { phoneNumber },
       { $pull: { listFriend: phoneRemove } }
     );
@@ -408,7 +408,7 @@ const changePassword = async (phoneNumber, newPassword) => {
       newPassword,
       parseInt(process.env.SALT_ROUNDS)
     );
-    await user.updateOne({password: hashPassword})
+    return await user.updateOne({password: hashPassword})
   } catch (error) {
     console.log(error)
     throw new Error(error)

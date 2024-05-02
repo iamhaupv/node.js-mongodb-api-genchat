@@ -85,11 +85,11 @@ const deleteRoomByRoomId = async (req, res) => {
 const joinRoomByRoomId = async (req, res) => {
   try {
     const { roomId, phoneNumber } = req.body;
-    const room = await roomRepository.joinRoomByRoomId(roomId, phoneNumber);
+    await roomRepository.joinRoomByRoomId(roomId, phoneNumber);
     const member = await roomRepository.authorizationRoomMembers(roomId, phoneNumber)
     res.status(200).json({
       message: "Join room successfully!",
-      data: room, member
+      data: member
     });
   } catch (error) {
     console.log(error);
@@ -119,6 +119,25 @@ const updateInforRoom = async (req, res) => {
   }
 };
 // authorization room leader
+const authorizationRoomOwner = async (req, res) => {
+  try {
+    const { roomId, phoneNumber } = req.body;
+    const room = await roomRepository.authorizationRoomOwner(
+      roomId,
+      phoneNumber
+    );
+    res.status(200).json({
+      message: "Authorization room owner successfully!",
+      data: room,
+    });
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({
+      message: "Cannot authorization room owner!",
+    });
+  }
+};
+// authorization room elders
 const authorizationRoomLeader = async (req, res) => {
   try {
     const { roomId, phoneNumber } = req.body;
@@ -127,32 +146,13 @@ const authorizationRoomLeader = async (req, res) => {
       phoneNumber
     );
     res.status(200).json({
-      message: "Authorization room leader successfully!",
+      message: "Authorization room leaders successfully!",
       data: room,
     });
   } catch (error) {
     console.log(error);
     res.status(500).json({
-      message: "Cannot authorization room leader!",
-    });
-  }
-};
-// authorization room elders
-const authorizationRoomElders = async (req, res) => {
-  try {
-    const { roomId, phoneNumber } = req.body;
-    const room = await roomRepository.authorizationRoomElders(
-      roomId,
-      phoneNumber
-    );
-    res.status(200).json({
-      message: "Authorization room elders successfully!",
-      data: room,
-    });
-  } catch (error) {
-    console.log(error);
-    res.status(500).json({
-      message: "Cannot authorization room elders!",
+      message: "Cannot authorization room leaders!",
     });
   }
 };
@@ -160,7 +160,7 @@ const authorizationRoomElders = async (req, res) => {
 const authorizationRoomMembers = async (req, res) => {
   try {
     const { roomId, phoneNumber } = req.body;
-    const room = roomRepository.authorizationRoomMembers(roomId, phoneNumber);
+    const room = await roomRepository.authorizationRoomMembers(roomId, phoneNumber);
     res.status(200).json({
       message: "Authorization room members successfully!",
       data: room,
@@ -224,7 +224,7 @@ module.exports = {
   removeElderOutGroup,
   removeMemberOutGroup,
   authorizationRoomMembers,
-  authorizationRoomElders,
+  authorizationRoomOwner,
   authorizationRoomLeader,
   updateInforRoom,
   joinRoomByRoomId,

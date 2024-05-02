@@ -21,11 +21,11 @@ const Room = mongoose.model(
       },
     ],
     roles: {
-      leader: {
+      owner: {
         type: String,
         required: false,
       },
-      elders: [
+      leader: [
         {
           type: String,
           required: false,
