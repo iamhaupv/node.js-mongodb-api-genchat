@@ -62,3 +62,5 @@
 <img src = 'https://i.imgur.com/HrpoVdS.png'/>
 <h1>api find-room-by-roomId</h1>
 <img src = 'https://i.imgur.com/vrEYbg4.png'/>
+<h1>api delete-room-by-roomId</h1>
+<img src = 'https://i.imgur.com/srCaXhf.png'/>
