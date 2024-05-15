@@ -1,4 +1,4 @@
-![image](https://github.com/longsoisuaxe1a/Node.js-MongoDB-GenChat/assets/88894662/fead88bf-cb5c-4c44-997f-33bde3b36148)<h1>User</h1>
+<h1>User</h1>
 <h1>api register</h1>
 <img src ='https://i.imgur.com/RLrQv0C.png' />
 <h1>api login</h1>
