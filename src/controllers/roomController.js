@@ -118,7 +118,7 @@ const updateInforRoom = async (req, res) => {
     });
   }
 };
-// authorization room leader
+// authorization room owner
 const authorizationRoomOwner = async (req, res) => {
   try {
     const { roomId, phoneNumber } = req.body;
@@ -137,7 +137,7 @@ const authorizationRoomOwner = async (req, res) => {
     });
   }
 };
-// authorization room elders
+// authorization room leader
 const authorizationRoomLeader = async (req, res) => {
   try {
     const { phoneAuth, roomId, phoneNumber } = req.body;
