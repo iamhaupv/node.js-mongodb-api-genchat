@@ -154,7 +154,7 @@ const updateInforRoom = async (roomId, newData) => {
     throw new Error(error);
   }
 };
-// authorization room elders
+// authorization room leader
 const authorizationRoomLeader = async (phoneAuth, roomId, phoneNumber) => {
   try {
     // Tìm kiếm thông tin phòng
