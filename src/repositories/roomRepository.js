@@ -311,7 +311,7 @@ const removeLeaderOutGroup = async (phoneAuth, roomId, phoneNumber) => {
   }
 };
 
-// remove leader
+// remove owner
 // const removeLeaderOutGroup = async (roomId, phoneNumber) => {
 //   try {
 //     const room = await Room.findOne({ roomId });
