@@ -43,7 +43,7 @@ const register = async ({
   listRequestSend,
   listRequestGet,
 }) => {
-  console.log("---------------Go to register repo---------------")
+  console.log("---------------Go to register repo---------------");
   try {
     const existUser = await User.findOne({ phoneNumber }).exec(); // tìm kiếm dựa trên số diện thoại hoặc email
     if (!!existUser) {
@@ -389,29 +389,38 @@ const removeFriend = async (phoneNumber, phoneRemove) => {
   }
 };
 // get List Friend
-const getListFriend = async(phoneNumber) =>{
+const getListFriend = async (phoneNumber) => {
   const user = await User.findOne({ phoneNumber });
   if (!user) {
     throw new Error();
   } else {
     return user.listFriend;
   }
-}
+};
 // change password by phoneNumber
 const changePassword = async (phoneNumber, newPassword) => {
   try {
-    const user = await User.findOne({phoneNumber})
-    if(!user){
-      throw new Error("User is not exist!")
+    const user = await User.findOne({ phoneNumber });
+    if (!user) {
+      throw new Error("User is not exist!");
     }
     const hashPassword = await bcrypt.hash(
       newPassword,
       parseInt(process.env.SALT_ROUNDS)
     );
-    return await user.updateOne({password: hashPassword})
+    return await user.updateOne({ password: hashPassword });
+  } catch (error) {
+    console.log(error);
+    throw new Error(error);
+  }
+};
+// get all users
+const getAllUser = async ()=>{
+  try {
+    const users = await User.find().exec(); // Fetch all users
+    return users;
   } catch (error) {
     console.log(error)
-    throw new Error(error)
   }
 }
 module.exports = {
@@ -432,4 +441,5 @@ module.exports = {
   login,
   register,
   getInfor,
+  getAllUser
 };

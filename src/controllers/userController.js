@@ -337,7 +337,7 @@ const acceptRequestGet = async (req, res) => {
     );
     res.status(200).json({
       message: "Add Friend Successfully!",
-      data: user
+      data: user,
     });
   } catch (error) {
     console.log(error);
@@ -356,7 +356,7 @@ const acceptRequestSend = async (req, res) => {
     );
     res.status(200).json({
       message: "Add Friend Successfully!",
-      data: user
+      data: user,
     });
   } catch (error) {
     console.log(error);
@@ -373,13 +373,14 @@ const acceptFriend = async (req, res) => {
       phoneNumberUserSend,
       phoneNumberUserGet
     );
-    const user2 =  await userRepository.acceptRequestGet(
+    const user2 = await userRepository.acceptRequestGet(
       phoneNumberUserGet,
       phoneNumberUserSend
     );
     res.status(200).json({
       message: "Add friend successfully!",
-      data: user1, user2
+      data: user1,
+      user2,
     });
   } catch (error) {
     console.log(error);
@@ -392,13 +393,13 @@ const acceptFriend = async (req, res) => {
 const addRequestSend = async (req, res) => {
   try {
     const { phoneNumberUserSend, phoneNumberUserGet } = req.body;
-    const user =  await userRepository.addRequestSend(
+    const user = await userRepository.addRequestSend(
       phoneNumberUserSend,
       phoneNumberUserGet
     );
     res.status(200).json({
       message: "Add Friend Successfully!",
-      data: user
+      data: user,
     });
   } catch (error) {
     console.log(error);
@@ -411,10 +412,13 @@ const addRequestSend = async (req, res) => {
 const addRequestGet = async (req, res) => {
   try {
     const { phoneNumberUserSend, phoneNumberUserGet } = req.body;
-    const user =  await userRepository.addRequestGet(phoneNumberUserGet, phoneNumberUserSend);
+    const user = await userRepository.addRequestGet(
+      phoneNumberUserGet,
+      phoneNumberUserSend
+    );
     res.status(200).json({
       message: "Add Friend Successfully!",
-      data: user
+      data: user,
     });
   } catch (error) {
     console.log(error);
@@ -460,10 +464,13 @@ const getRequestSend = async (req, res) => {
 const removeRequestSend = async (req, res) => {
   try {
     const { phoneNumber, phoneRemove } = req.body;
-    const user = await userRepository.removeRequestSend(phoneNumber, phoneRemove);
+    const user = await userRepository.removeRequestSend(
+      phoneNumber,
+      phoneRemove
+    );
     res.status(200).json({
       message: "Remove Successfully!",
-      data: user
+      data: user,
     });
   } catch (error) {
     console.log(error);
@@ -476,10 +483,13 @@ const removeRequestSend = async (req, res) => {
 const removeRequestGet = async (req, res) => {
   try {
     const { phoneNumber, phoneRemove } = req.body;
-    const user = await userRepository.removeRequestGet(phoneNumber, phoneRemove);
+    const user = await userRepository.removeRequestGet(
+      phoneNumber,
+      phoneRemove
+    );
     res.status(200).json({
       message: "Remove Successfully!",
-      data: user
+      data: user,
     });
   } catch (error) {
     console.log(error);
@@ -495,7 +505,7 @@ const removeFriend = async (req, res) => {
     const user = await userRepository.removeFriend(phoneNumber, phoneRemove);
     res.status(200).json({
       message: "Remove Friend Successfully!",
-      data: user
+      data: user,
     });
   } catch (error) {
     console.log(error);
@@ -524,11 +534,11 @@ const getListFriend = async (req, res) => {
 const changePassword = async (req, res) => {
   try {
     const { phoneNumber, newPassword } = req.body;
-    console.log(phoneNumber, newPassword)
+    console.log(phoneNumber, newPassword);
     const user = await userRepository.changePassword(phoneNumber, newPassword);
     res.status(200).json({
       message: "Change password successfully!",
-      data: user
+      data: user,
     });
   } catch (error) {
     console.log(error);
@@ -537,7 +547,21 @@ const changePassword = async (req, res) => {
     });
   }
 };
-//
+// get all users
+const getAllUser = async (req, res) => {
+  try {
+    const collection = await userRepository.getAllUser();
+    res.status(200).json({
+      message: "Successfully",
+      data: collection,
+    });
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({
+      message: "Collection is empty",
+    });
+  }
+};
 module.exports = {
   changePassword,
   getListFriend,
@@ -561,4 +585,5 @@ module.exports = {
   reset,
   login,
   register,
+  getAllUser,
 };
