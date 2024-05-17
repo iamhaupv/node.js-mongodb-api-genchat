@@ -4,7 +4,6 @@ const jwt = require("jsonwebtoken");
 const mailer = require("../utils/mailer");
 // login (đăng nhập)
 const login = async ({ phoneNumber, password }) => {
-  const jwt_secret = process.env.JWT_SECRET
   let existUser = await User.findOne({ phoneNumber }).exec();
   if (existUser) {
     let isMatch = await bcrypt.compare(password, existUser.password);
@@ -14,7 +13,7 @@ const login = async ({ phoneNumber, password }) => {
           data: existUser,
         },
         // process.env.JWT_SECRET,
-        jwt_secret,
+        "Pham Van Hau",
         {
           expiresIn: "10 days",
         }
